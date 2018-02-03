@@ -1,5 +1,11 @@
-<?php
+<html>
+<head>
+<title>Netflix Roulette Docs</title>
+</head>
 
-header('Location: /generated/index.html');
+<body>
 
-?>
+
+
+</body>
+</html>
