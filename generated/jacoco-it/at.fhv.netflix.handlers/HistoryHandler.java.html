@@ -46,6 +46,17 @@ public class HistoryHandler {
 		// End of user code
 <span class="fc" id="L47">	}</span>
 	
+	public void clearHistory(String token) throws Exception {
+		// Start of user code getHistory
+<span class="nc bnc" id="L51" title="All 4 branches missed.">		if (token == null || &quot;&quot;.equals(token)) {</span>
+<span class="nc" id="L52">			return; </span>
+		}
+		
+<span class="nc" id="L55">		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);</span>
+<span class="nc" id="L56">		user.setHistory(new at.fhv.netflix.models.History()); </span>
+		// End of user code
+<span class="nc" id="L58">	}</span>
+	
 	// Start of user code (user defined operations)
 	
 	// End of user code
