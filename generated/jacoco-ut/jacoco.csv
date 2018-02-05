@@ -1,7 +1,7 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 NetflixRouletteBackend,at.fhv.netflix.handlers,AuthHandler,20,86,1,5,2,22,1,7,0,5
-NetflixRouletteBackend,at.fhv.netflix.handlers,HistoryHandler,19,49,6,4,6,15,5,5,1,4
-NetflixRouletteBackend,at.fhv.netflix.handlers,RecommendationHandler,4,146,5,7,2,30,5,4,0,3
+NetflixRouletteBackend,at.fhv.netflix.handlers,HistoryHandler,20,55,8,6,7,16,7,5,1,4
+NetflixRouletteBackend,at.fhv.netflix.handlers,RecommendationHandler,4,146,4,8,2,30,4,5,0,3
 NetflixRouletteBackend,at.fhv.netflix,Application,5,8,0,0,2,2,1,2,1,2
 NetflixRouletteBackend,at.fhv.netflix,Application.new WebMvcConfigurerAdapter() {...},0,44,0,0,0,4,0,2,0,2
 NetflixRouletteBackend,at.fhv.netflix.models,HistoryItem,9,24,0,0,3,10,3,4,3,4
