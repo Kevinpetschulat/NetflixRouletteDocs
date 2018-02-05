@@ -12,19 +12,18 @@
 	
 	
 	@org.springframework.web.bind.annotation.GetMapping(&quot;history&quot;)
-	public at.fhv.netflix.models.History getHistory(@org.springframework.web.bind.annotation.RequestParam(&quot;token&quot;) String token) throws Exception {
-		// Start of user code getHistory
-<span class="fc" id="L17">		return at.fhv.netflix.handlers.HistoryHandler.getInstance().getHistory(token);</span>
+	public void clearHistory(@org.springframework.web.bind.annotation.RequestParam(&quot;token&quot;) String token) throws Exception {
+		// Start of user code clearHistory
+<span class="nc" id="L17">		at.fhv.netflix.handlers.HistoryHandler.getInstance().clearHistory(token);</span>
 		// End of user code
-	}
-
+<span class="nc" id="L19">	}</span>
 	
 	@org.springframework.web.bind.annotation.GetMapping(&quot;clearHistory&quot;)
-	public void clearHistory(@org.springframework.web.bind.annotation.RequestParam(&quot;token&quot;) String token) throws Exception {
+	public at.fhv.netflix.models.History getHistory(@org.springframework.web.bind.annotation.RequestParam(&quot;token&quot;) String token) throws Exception {
 		// Start of user code getHistory
-<span class="nc" id="L25">		at.fhv.netflix.handlers.HistoryHandler.getInstance().clearHistory(token);</span>
+<span class="fc" id="L24">		return at.fhv.netflix.handlers.HistoryHandler.getInstance().getHistory(token);</span>
 		// End of user code
-<span class="nc" id="L27">	}</span>
+	}
 	
 	// Start of user code (user defined operations)
 	

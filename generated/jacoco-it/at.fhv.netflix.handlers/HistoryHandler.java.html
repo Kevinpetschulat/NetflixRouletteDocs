@@ -24,39 +24,38 @@ public class HistoryHandler {
 <span class="fc" id="L24">	    return INSTANCE;</span>
 	}
 	
-	public at.fhv.netflix.models.History getHistory(String token) throws Exception {
-		// Start of user code getHistory
-<span class="fc bfc" id="L29" title="All 4 branches covered.">		if(token == null || &quot;&quot;.equals(token)) {</span>
-<span class="fc" id="L30">			return null; </span>
+	public void clearHistory(String token) throws Exception {
+		// Start of user code clearHistory
+<span class="nc bnc" id="L29" title="All 4 branches missed.">		if (token == null || &quot;&quot;.equals(token)) {</span>
+<span class="nc" id="L30">			return; </span>
 		}
 		
-<span class="fc" id="L33">		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);</span>
-<span class="fc" id="L34">		return user.getHistory();</span>
+<span class="nc" id="L33">		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);</span>
+<span class="nc" id="L34">		user.setHistory(new at.fhv.netflix.models.History()); </span>
+		// End of user code
+<span class="nc" id="L36">	}</span>
+	
+	public at.fhv.netflix.models.History getHistory(String token) throws Exception {
+		// Start of user code getHistory
+<span class="fc bfc" id="L40" title="All 4 branches covered.">		if(token == null || &quot;&quot;.equals(token)) {</span>
+<span class="fc" id="L41">			return null; </span>
+		}
+		
+<span class="fc" id="L44">		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);</span>
+<span class="fc" id="L45">		return user.getHistory();</span>
 		// End of user code
 	}
 	
 	public void addHistory(String token, int genreId, at.fhv.netflix.models.Recommendation result) throws Exception {
 		// Start of user code addHistory
-<span class="fc" id="L40">		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);</span>
-<span class="fc" id="L41">		at.fhv.netflix.models.HistoryItem item = new at.fhv.netflix.models.HistoryItem();</span>
-<span class="fc" id="L42">        item.setRequested(java.time.Instant.now().toEpochMilli());</span>
-<span class="fc" id="L43">        item.setGenreId(genreId);</span>
-<span class="fc" id="L44">        item.setResult(result);</span>
-<span class="fc" id="L45">        user.getHistory().getItems().add(item);</span>
+<span class="fc" id="L51">		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);</span>
+<span class="fc" id="L52">		at.fhv.netflix.models.HistoryItem item = new at.fhv.netflix.models.HistoryItem();</span>
+<span class="fc" id="L53">        item.setRequested(java.time.Instant.now().toEpochMilli());</span>
+<span class="fc" id="L54">        item.setGenreId(genreId);</span>
+<span class="fc" id="L55">        item.setResult(result);</span>
+<span class="fc" id="L56">        user.getHistory().getItems().add(item);</span>
 		// End of user code
-<span class="fc" id="L47">	}</span>
-
-	public void clearHistory(String token) throws Exception {
-		// Start of user code getHistory
-<span class="nc bnc" id="L51" title="All 4 branches missed.">		if (token == null || &quot;&quot;.equals(token)) {</span>
-<span class="nc" id="L52">			return; </span>
-		}
-		
-<span class="nc" id="L55">		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);</span>
-<span class="nc" id="L56">		user.setHistory(new at.fhv.netflix.models.History()); </span>
-		// End of user code
-<span class="nc" id="L58">	}</span>
-
+<span class="fc" id="L58">	}</span>
 	
 	// Start of user code (user defined operations)
 	
